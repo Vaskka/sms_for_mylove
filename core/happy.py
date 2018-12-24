@@ -12,7 +12,10 @@ class Happy:
         :param little_sa: 小萨引用
         :return: None
         """
-        little_sa.mylove.send(cls._get_happy_str())
+        result_text = cls._get_happy_str()
+        little_sa.mylove.send(result_text)
+
+        return result_text
 
         pass
 
