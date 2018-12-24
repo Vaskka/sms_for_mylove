@@ -36,7 +36,7 @@ TASK_SETTING_PATH = "task.json"
 TEXT_TEMPLATE_SETTING_PATH = "text.json"
 
 # mylove
-MYLOVE_SENDER = "慕小源"
+MYLOVE_SENDER = "超喜欢的小糕哈哈哈"
 # MYLOVE_SENDER = "Vernon"
 
 # log文件路径
