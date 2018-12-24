@@ -2,7 +2,7 @@ import datetime
 import json
 import traceback
 
-from core import weather, lesson, auto_check, greeting, news
+from core import weather, lesson, auto_check, greeting, news, happy
 from core.log import Log
 from model.base import BaseModel
 from tool import util
@@ -99,6 +99,25 @@ class News(BaseModel):
         """
         try:
             result_text = news.News.send_news(cls.little_sa)
+
+            # 记录log
+            Log.write_success(cls.name, result_text)
+        except Exception:
+            cls.deal_error_traceback_log_format_str()
+        pass
+
+
+class Happy(BaseModel):
+    name = "happy"
+
+    @classmethod
+    def run(cls):
+        """
+        发送笑话
+        :return: None
+        """
+        try:
+            result_text = happy.Happy.send_happy(cls.little_sa)
 
             # 记录log
             Log.write_success(cls.name, result_text)
