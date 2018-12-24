@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38244c4c-fdb8-4da3-a021-87cad3168395" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/ShowapiRequest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/main_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/main_core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/news.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/main_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/main_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather.json" beforeDir="false" afterPath="$PROJECT_DIR$/weather.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,12 +70,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="3" />
+          <entry key="md" value="1" />
           <entry key="py" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
+          <entry key="Markdown" value="1" />
           <entry key="Python" value="30" />
         </counts>
       </usages-collector>
@@ -90,14 +85,16 @@
         <counts>
           <entry key="Python Console" value="181" />
           <entry key="json" value="363" />
+          <entry key="md" value="45" />
           <entry key="py" value="8331" />
-          <entry key="txt" value="46" />
+          <entry key="txt" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="363" />
-          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="Markdown" value="45" />
+          <entry key="PLAIN_TEXT" value="66" />
           <entry key="Python" value="8512" />
         </counts>
       </usages-collector>
@@ -120,24 +117,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/happy.py">
+        <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1545668364368" expanded="true" signature="46:47" ph="..." />
-                <marker date="1545668364368" expanded="true" signature="100:264" ph="..." />
-              </folding>
+            <state relative-caret-position="58">
+              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="158">
+                <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -265,6 +260,7 @@
         <option value="$PROJECT_DIR$/core/news.py" />
         <option value="$PROJECT_DIR$/task.json" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -397,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545668715779</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="set news to show pic">
+      <created>1545671288121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545671288121</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -463,7 +466,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update daily happy" />
     <MESSAGE value="update database password" />
-    <option name="LAST_COMMIT_MESSAGE" value="update database password" />
+    <MESSAGE value="set news to show pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="set news to show pic" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/model/waether.py" />
@@ -709,8 +713,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="58">
           <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="158">
+            <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
