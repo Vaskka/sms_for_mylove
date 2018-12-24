@@ -2,7 +2,7 @@
 # 调试模式
 import os
 
-DEBUG = True
+DEBUG = False
 
 # 学期 0-春季 1-寒假 2-秋季 3-暑假
 TERM = 2
@@ -27,7 +27,7 @@ EMAIL_TO = "1139851358@qq.com"
 
 
 # 天气信息文件路径
-WEATHER_PATH = "weather.json"
+WEATHER_INFO_FILENAME = "weather.json"
 
 # 定时任务配置文件路径
 TASK_SETTING_PATH = "task.json"

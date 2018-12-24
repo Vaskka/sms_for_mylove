@@ -1,5 +1,6 @@
 import datetime
 import json
+import os
 import random
 import traceback
 
@@ -34,7 +35,7 @@ class WeatherCatcher:
         # weather info dict
         di = cls._get_info_dict(str(cls._get_raw_html(), "utf-8"))
 
-        with open(settings.WEATHER_PATH, "w") as f:
+        with open(os.path.join(settings.POINT_MAIN_PATH, "weather_catcher", settings.WEATHER_INFO_FILENAME), "w") as f:
             f.write(json.dumps(di))
 
         return di
@@ -194,7 +195,7 @@ class WeatherSender:
         :return: dict
         """
 
-        with open(settings.WEATHER_PATH, "r") as f:
+        with open(os.path.join(settings.POINT_MAIN_PATH, "weather_catcher", settings.WEATHER_INFO_FILENAME), "r") as f:
             s = f.read()
 
         return json.loads(s)
