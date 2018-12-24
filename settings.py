@@ -88,7 +88,7 @@ FACE_EMOTION = {
 # #### database #### #
 # 数据库host
 MYSQL_HOST = "localhost"
-MYSQL_PASSWORD = "czm19990216"
+MYSQL_PASSWORD = "0000"
 MYSQL_USER = "root"
 MYSQL_DATABASE = "little_sa"
 
