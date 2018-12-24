@@ -94,7 +94,7 @@ class News(BaseModel):
     @classmethod
     def run(cls):
         """
-        发送新闻
+        发送每日壁纸
         :return: None
         """
         try:

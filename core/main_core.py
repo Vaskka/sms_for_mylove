@@ -159,4 +159,5 @@ class LittleSa:
         settings.TULING_API_KEY = json_dict["tuling"]
         settings.FACE_API_KEY = json_dict["face_api_key"]
         settings.FACE_API_SECRET = json_dict["face_api_secret"]
+        settings.SHOW_API_KEY = json_dict["show_api_key"]
         pass

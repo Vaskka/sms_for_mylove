@@ -1,37 +1,37 @@
 [
   {
     "name": "greeting",
-    "at": "00:23",
+    "at": "01:07",
     "statement": "早安问候",
     "do_model_class": "Greeting"
   },
   {
     "name": "weather_catcher",
-    "at": "00:23",
+    "at": "01:07",
     "statement": "抓取第二天的天气数据",
     "do_model_class": "WeatherCatcher"
   },
   {
     "name": "weather_sender",
-    "at": "00:23",
+    "at": "01:07",
     "statement": "发送当前的天气数据",
     "do_model_class": "WeatherSender"
   },
   {
     "name": "lesson",
-    "at": "00:23",
+    "at": "01:07",
     "statement": "发送课表数据",
     "do_model_class": "Lesson"
   },
   {
     "name": "news",
-    "at": "00:23",
-    "statement": "每日新闻",
+    "at": "01:07",
+    "statement": "每日壁纸",
     "do_model_class": "News"
   },
   {
     "name": "happy",
-    "at": "00:23",
+    "at": "01:07",
     "statement": "每日笑笑",
     "do_model_class": "Happy"
   }
