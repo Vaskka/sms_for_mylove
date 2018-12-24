@@ -1,8 +1,6 @@
+# -*- coding: utf-8 -*-
 import traceback
 
-from wxpy import *
-
-import settings
 from core.log import Log
 from tool import util
 

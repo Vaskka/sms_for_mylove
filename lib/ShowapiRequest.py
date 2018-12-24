@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests
 from urllib import parse
 #全局请求头

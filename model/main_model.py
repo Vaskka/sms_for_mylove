@@ -1,11 +1,9 @@
-import datetime
+# -*- coding: utf-8 -*-
 import json
-import traceback
 
 from core import weather, lesson, auto_check, greeting, news, happy
 from core.log import Log
 from model.base import BaseModel
-from tool import util
 
 
 class Greeting(BaseModel):

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import os
 import random
@@ -6,8 +7,6 @@ import requests
 
 import settings
 from lib.ShowapiRequest import ShowapiRequest
-from model.text import template
-from settings import POINT_MAIN_PATH
 
 
 class News:

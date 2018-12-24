@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 # 调试模式
 import os
 
