@@ -8,15 +8,28 @@ from tool.util import select_with_regex, trans_img
 
 
 class Reply:
-    def __init__(self, reply_dict):
-        self.reply_dict = reply_dict
+    reply_dict = None
 
-        self.front_function_switch = {
-            "switch": False,
-            "classify": ""
-        }
+    front_function_switch = {
+        "switch": False,
+        "classify": ""
+    }
+
+    @classmethod
+    def get_to_switch_off(cls, msg):
+        """
+        关闭小萨
+        :param msg:
+        :return:
+        """
+
+        if msg.text == cls.reply_dict["mylove"]["open"]["switch_off"]:
+            return ReplyResult(cls.reply_dict["little_sa"]["reply_mapping"]["switch_off"], True)
+        else:
+            return ReplyResult(None, False)
         pass
 
+    @classmethod
     def close_front(self):
         """
         关闭前置功能
@@ -26,6 +39,7 @@ class Reply:
         self.front_function_switch["classify"] = ""
         pass
 
+    @classmethod
     def check_front_function(self, msg):
         """
         检查是否有前置功能
@@ -76,35 +90,37 @@ class Reply:
 
         pass
 
-    def check_main_function(self, message):
+    @classmethod
+    def check_main_function(cls, message):
         """
         检查message对应的功能，调用对应的Model.run()
         :param message: str
         :return: None
         """
 
-        if message == self.reply_dict["mylove"]["face"]["beautify"]:
-            self.front_function_switch["switch"] = True
-            self.front_function_switch["classify"] = "beautify"
+        if message == cls.reply_dict["mylove"]["face"]["beautify"]:
+            cls.front_function_switch["switch"] = True
+            cls.front_function_switch["classify"] = "beautify"
             return ReplyResult("快把想要美颜的图片发给小萨叭，小萨很厉害的哟!", True)
-        elif message == self.reply_dict["mylove"]["face"]["attr"]:
-            self.front_function_switch["switch"] = True
-            self.front_function_switch["classify"] = "attr"
+        elif message == cls.reply_dict["mylove"]["face"]["attr"]:
+            cls.front_function_switch["switch"] = True
+            cls.front_function_switch["classify"] = "attr"
             return ReplyResult("快把想要让小萨看的图片发给小萨叭，小萨很厉害的哟!", True)
-        elif message == self.reply_dict["cloth"]["cloth"]:
+        elif message == cls.reply_dict["mylove"]["cloth"]["cloth"]:
             return ReplyResult(cloth.WashCloth.check_wash_cloth(), True)
         else:
             return ReplyResult(None, False)
         pass
 
-    def check_switch_on(self, message):
+    @classmethod
+    def check_switch_on(cls, message):
         """
         检查是否开启
         :return: ReplyResult
         """
 
-        if message == self.reply_dict["mylove"]["close"]["switch_on"]:
-            return ReplyResult(self.reply_dict["little_sa"]["reply_mapping"]["switch_on"], True)
+        if message == cls.reply_dict["mylove"]["close"]["switch_on"]:
+            return ReplyResult(cls.reply_dict["little_sa"]["reply_mapping"]["switch_on"], True)
         else:
             return ReplyResult(None, False)
         pass
@@ -123,7 +139,7 @@ class ReplyResult:
     pass
 
 
-class FaceReplyResult:
+class FaceReplyResult(ReplyResult):
     """
     人脸类型回复信息
     """

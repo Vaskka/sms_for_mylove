@@ -22,8 +22,7 @@ def main_run():
     :return:
     """
 
-    m = LittleSa()
-    m.init_sa()
+    LittleSa.init_sa()
 
     while True:
         schedule.run_pending()

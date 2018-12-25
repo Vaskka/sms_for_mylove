@@ -29,7 +29,8 @@ class TextTemplate:
         cls.inner_dict = json.loads(json_dict_text)
 
         # 自动回复检查模块
-        cls.reply = Reply(cls.inner_dict["auto_reply"])
+        cls.reply = Reply
+        cls.reply.reply_dict = cls.inner_dict["auto_reply"]
         pass
 
     @classmethod
@@ -141,13 +142,8 @@ class TextTemplate:
         pass
 
     @classmethod
-    def check_switch_on_message(cls, message):
-        """
-        开启小萨时的功能检测
-        :param message 发送来的message
-        :return:
-        """
-        pass
+    def get_to_switch_off(cls, msg):
+        return cls.reply.get_to_switch_off(msg)
 
     @classmethod
     def check_to_switch_on_message(cls, message):
@@ -187,6 +183,8 @@ class TextTemplate:
         """
         cls.reply.close_front()
         pass
+
+
 
     @classmethod
     def get_greeting_str(cls):
