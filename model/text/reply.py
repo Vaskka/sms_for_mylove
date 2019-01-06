@@ -71,6 +71,9 @@ class Reply:
                 # 储存文件
                 # 拿到文件格式
                 fmt = select_with_regex(regex="^.*\.(.*)$", s=msg.file_name)
+
+                if fmt != "png" or fmt != "jpg" or fmt != "jpeg":
+                    raise FaceReplyResult("不支持这种格式哟~", fmt)
                 temp_path = os.path.join(settings.POINT_MAIN_PATH, "face", "_attr_input.%s" % fmt)
                 correct_path = os.path.join(settings.POINT_MAIN_PATH, "face", "_attr_input.jpg")
                 msg.get_file(save_path=temp_path)

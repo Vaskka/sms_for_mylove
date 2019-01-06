@@ -70,7 +70,7 @@ class Face:
             "api_key": settings.FACE_API_KEY,
             "api_secret": settings.FACE_API_SECRET,
             "image_base64": image_b64,
-            "return_attributes": "gender,age,smiling,emotion,beauty"
+            # "return_attributes": "gender,age,smiling,emotion,beauty"
         }
 
         resp = requests.post(url=cls.attr_open_url, data=data)

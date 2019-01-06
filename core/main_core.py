@@ -6,6 +6,7 @@ import traceback
 from wxpy import *
 
 import settings
+from exceptions.exception import FacePicFormatNotSupportException
 from model.base import BaseModel
 from model.text.template import TextTemplate
 from timer.maker import Timer
@@ -154,6 +155,8 @@ class LittleSa:
 
                         # 不论是否有响应都关闭前置功能
                         cls.template.close_front_function()
+            except FacePicFormatNotSupportException as e:
+                cls.mylove.send(e.message)
             except:
                 cls.logger.exception(traceback.format_exc())
                 pass
